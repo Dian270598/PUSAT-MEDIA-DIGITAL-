@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>Pusat Media Digital</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -15,124 +17,283 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#f5f8ff;
-color:#222;
+background:#07152b;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:900px;
+height:900px;
+
+background:radial-gradient(circle,#0077ff55,transparent);
+
+top:-300px;
+right:-250px;
+
+z-index:-1;
+
+animation:float 8s infinite alternate;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:700px;
+height:700px;
+
+background:radial-gradient(circle,#00d4ff44,transparent);
+
+bottom:-250px;
+left:-200px;
+
+z-index:-1;
+
+animation:float2 10s infinite alternate;
+
+}
+
+@keyframes float{
+
+100%{
+
+transform:translateY(80px) translateX(-80px);
+
+}
+
+}
+
+@keyframes float2{
+
+100%{
+
+transform:translateY(-70px) translateX(70px);
+
+}
+
 }
 
 header{
-background:#0057ff;
-color:white;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
+
+position:fixed;
+
 top:0;
+
+left:0;
+
+width:100%;
+
+padding:20px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+backdrop-filter:blur(20px);
+
+background:#001d44aa;
+
+z-index:999;
+
 }
 
 .logo{
+
 font-size:28px;
-font-weight:bold;
+
+font-weight:800;
+
+}
+
+.logo span{
+
+color:#4bc4ff;
+
 }
 
 nav a{
-color:white;
+
 text-decoration:none;
-margin-left:20px;
-font-weight:500;
+
+color:white;
+
+margin-left:30px;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#59c8ff;
+
 }
 
 .hero{
-background:linear-gradient(135deg,#0057ff,#00b7ff);
-color:white;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
 text-align:center;
-padding:100px 20px;
+
+flex-direction:column;
+
+padding:20px;
+
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:20px;
+
+font-size:70px;
+
+max-width:900px;
+
+line-height:1.2;
+
+margin-bottom:25px;
+
+}
+
+.hero h1 span{
+
+background:linear-gradient(90deg,#00c6ff,#ffffff);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
 }
 
 .hero p{
-font-size:18px;
-max-width:650px;
-margin:auto;
+
+font-size:22px;
+
+max-width:700px;
+
+opacity:.9;
+
 }
 
 .btn{
+
+margin-top:40px;
+
 display:inline-block;
-margin-top:30px;
-background:white;
-color:#0057ff;
-padding:15px 35px;
-border-radius:40px;
+
+padding:18px 45px;
+
+background:linear-gradient(90deg,#0077ff,#00d4ff);
+
+color:white;
+
 text-decoration:none;
-font-weight:bold;
+
+border-radius:50px;
+
+font-weight:700;
+
+box-shadow:0 15px 40px #0077ff55;
+
+transition:.4s;
+
 }
 
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-padding:70px 0;
+.btn:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 25px 60px #00aaff88;
+
 }
 
-.title{
-text-align:center;
-font-size:36px;
-color:#0057ff;
-margin-bottom:40px;
-}
+.stats{
 
-.cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:30px;
+
+padding:80px 8%;
+
 }
 
 .card{
-background:white;
-padding:25px;
-border-radius:18px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border-radius:25px;
+
+padding:35px;
+
 text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.4s;
+
 }
 
-.card h3{
-margin:15px 0;
-color:#0057ff;
+.card:hover{
+
+transform:translateY(-10px);
+
 }
 
-.price{
-font-size:30px;
-font-weight:bold;
-color:#0057ff;
-margin:15px 0;
+.card h2{
+
+font-size:46px;
+
+color:#5ed8ff;
+
 }
 
-footer{
-background:#003399;
-color:white;
-text-align:center;
-padding:40px 20px;
+.card p{
+
+margin-top:10px;
+
 }
 
 @media(max-width:768px){
 
 .hero h1{
-font-size:34px;
+
+font-size:40px;
+
 }
 
-header{
-flex-direction:column;
+.stats{
+
+grid-template-columns:1fr 1fr;
+
 }
 
 nav{
-margin-top:10px;
+
+display:none;
+
 }
 
 }
@@ -146,60 +307,144 @@ margin-top:10px;
 <header>
 
 <div class="logo">
-Pusat Media Digital
+
+Pusat <span>Media Digital</span>
+
 </div>
 
 <nav>
+
+<a href="#">Beranda</a>
+
 <a href="#layanan">Layanan</a>
+
 <a href="#harga">Harga</a>
+
 <a href="#kontak">Kontak</a>
+
 </nav>
 
 </header>
 
 <section class="hero">
 
-<h1>Tingkatkan Media Sosial Anda</h1>
+<h1>
+
+Tingkatkan
+
+<span>Media Sosial</span>
+
+Anda
+
+</h1>
 
 <p>
-Layanan Followers, Likes, Views dan Engagement dengan proses cepat serta pelayanan profesional.
+
+Followers • Likes • Views • Komentar • Share
+
 </p>
 
-<a class="btn" href="https://wa.me/6285855444724">
+<a class="btn"
+
+href="https://wa.me/6285855444724">
+
 Pesan Sekarang
+
 </a>
+
+</section>
+
+<section class="stats">
+
+<div class="card">
+
+<h2>10K+</h2>
+
+<p>Pesanan</p>
+
+</div>
+
+<div class="card">
+
+<h2>5K+</h2>
+
+<p>Pelanggan</p>
+
+</div>
+
+<div class="card">
+
+<h2>24/7</h2>
+
+<p>Support</p>
+
+</div>
+
+<div class="card">
+
+<h2>99%</h2>
+
+<p>Kepuasan</p>
+
+</div>
 
 </section>
 <!-- ================= LAYANAN ================= -->
 
-<section id="layanan" class="container">
+<section id="layanan" style="padding:100px 8%;">
 
-<h2 class="title">Layanan Kami</h2>
+<h2 style="text-align:center;font-size:48px;margin-bottom:60px;">
+Layanan Kami
+</h2>
 
-<div class="cards">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;">
 
 <div class="card">
-<h2>📈</h2>
-<h3>Followers Instagram</h3>
-<p>Menambah jumlah followers untuk meningkatkan kredibilitas akun.</p>
+
+<div style="font-size:60px;">📈</div>
+
+<h3 style="margin:20px 0;">Followers Instagram</h3>
+
+<p>
+Membantu meningkatkan jumlah followers akun Anda.
+</p>
+
 </div>
 
 <div class="card">
-<h2>❤️</h2>
-<h3>Likes Instagram</h3>
-<p>Meningkatkan interaksi pada setiap postingan Instagram.</p>
+
+<div style="font-size:60px;">❤️</div>
+
+<h3 style="margin:20px 0;">Likes Instagram</h3>
+
+<p>
+Meningkatkan interaksi pada setiap postingan.
+</p>
+
 </div>
 
 <div class="card">
-<h2>🎬</h2>
-<h3>Views Reels</h3>
-<p>Meningkatkan jumlah penayangan video dan Reels.</p>
+
+<div style="font-size:60px;">🎬</div>
+
+<h3 style="margin:20px 0;">Views Reels</h3>
+
+<p>
+Meningkatkan jangkauan video dan Reels Anda.
+</p>
+
 </div>
 
 <div class="card">
-<h2>💬</h2>
-<h3>Komentar</h3>
-<p>Membantu meningkatkan engagement akun media sosial.</p>
+
+<div style="font-size:60px;">💬</div>
+
+<h3 style="margin:20px 0;">Komentar</h3>
+
+<p>
+Meningkatkan engagement media sosial.
+</p>
+
 </div>
 
 </div>
@@ -208,40 +453,42 @@ Pesan Sekarang
 
 <!-- ================= HARGA ================= -->
 
-<section id="harga" class="container">
+<section id="harga" style="padding:100px 8%;">
 
-<h2 class="title">Daftar Harga</h2>
+<h2 style="text-align:center;font-size:48px;margin-bottom:60px;">
+Daftar Harga Terlaris Followers Instagram
+</h2>
 
-<div class="cards">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;">
 
 <div class="card">
 <h3>100 Followers</h3>
-<div class="price">Rp10.000</div>
-<a class="btn" href="https://wa.me/6285855444724?text=Halo%20Admin,%20saya%20ingin%20memesan%20100%20Followers">Pesan</a>
+<h1 style="margin:20px 0;color:#59d4ff;">Rp10.000</h1>
+<a class="btn" href="https://wa.me/6285855444724?text=Halo%20Admin,%20saya%20ingin%20pesan%20100%20Followers">Pesan</a>
 </div>
 
 <div class="card">
 <h3>500 Followers</h3>
-<div class="price">Rp25.000</div>
-<a class="btn" href="https://wa.me/6285855444724?text=Halo%20Admin,%20saya%20ingin%20memesan%20500%20Followers">Pesan</a>
+<h1 style="margin:20px 0;color:#59d4ff;">Rp25.000</h1>
+<a class="btn" href="https://wa.me/6285855444724?text=Halo%20Admin,%20saya%20ingin%20pesan%20500%20Followers">Pesan</a>
 </div>
 
 <div class="card">
 <h3>1.000 Followers</h3>
-<div class="price">Rp45.000</div>
-<a class="btn" href="https://wa.me/6285855444724?text=Halo%20Admin,%20saya%20ingin%20memesan%201000%20Followers">Pesan</a>
+<h1 style="margin:20px 0;color:#59d4ff;">Rp45.000</h1>
+<a class="btn" href="https://wa.me/6285855444724?text=Halo%20Admin,%20saya%20ingin%20pesan%201000%20Followers">Pesan</a>
 </div>
 
 <div class="card">
 <h3>5.000 Followers</h3>
-<div class="price">Rp120.000</div>
-<a class="btn" href="https://wa.me/6285855444724?text=Halo%20Admin,%20saya%20ingin%20memesan%205000%20Followers">Pesan</a>
+<h1 style="margin:20px 0;color:#59d4ff;">Rp120.000</h1>
+<a class="btn" href="https://wa.me/6285855444724?text=Halo%20Admin,%20saya%20ingin%20pesan%205000%20Followers">Pesan</a>
 </div>
 
 <div class="card">
 <h3>10.000 Followers</h3>
-<div class="price">Rp220.000</div>
-<a class="btn" href="https://wa.me/6285855444724?text=Halo%20Admin,%20saya%20ingin%20memesan%2010000%20Followers">Pesan</a>
+<h1 style="margin:20px 0;color:#59d4ff;">Rp220.000</h1>
+<a class="btn" href="https://wa.me/6285855444724?text=Halo%20Admin,%20saya%20ingin%20pesan%2010000%20Followers">Pesan</a>
 </div>
 
 </div>
@@ -250,34 +497,36 @@ Pesan Sekarang
 
 <!-- ================= KEUNGGULAN ================= -->
 
-<section class="container">
+<section style="padding:100px 8%;">
 
-<h2 class="title">Mengapa Memilih Kami?</h2>
+<h2 style="text-align:center;font-size:48px;margin-bottom:60px;">
+Mengapa Memilih Kami?
+</h2>
 
-<div class="cards">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;">
 
 <div class="card">
-<h2>⚡</h2>
-<h3>Proses Cepat</h3>
-<p>Pesanan diproses secepat mungkin setelah pembayaran dikonfirmasi.</p>
+⚡
+<h3 style="margin:20px 0;">Proses Cepat</h3>
+<p>Pesanan diproses sesegera mungkin setelah pembayaran dikonfirmasi.</p>
 </div>
 
 <div class="card">
-<h2>🔒</h2>
-<h3>Aman</h3>
-<p>Tidak memerlukan kata sandi akun Anda saat melakukan pemesanan.</p>
+🔒
+<h3 style="margin:20px 0;">Layanan Aman</h3>
+<p>Tidak memerlukan kata sandi akun Anda untuk melakukan pemesanan.</p>
 </div>
 
 <div class="card">
-<h2>💬</h2>
-<h3>Admin Responsif</h3>
-<p>Siap membantu melalui WhatsApp setiap hari.</p>
+💬
+<h3 style="margin:20px 0;">Admin Responsif</h3>
+<p>Siap membantu menjawab pertanyaan Anda melalui WhatsApp.</p>
 </div>
 
 <div class="card">
-<h2>💎</h2>
-<h3>Harga Terjangkau</h3>
-<p>Paket lengkap dengan harga yang kompetitif.</p>
+💎
+<h3 style="margin:20px 0;">Harga Terjangkau</h3>
+<p>Paket lengkap dengan harga kompetitif.</p>
 </div>
 
 </div>
@@ -285,33 +534,35 @@ Pesan Sekarang
 </section>
 <!-- ================= TESTIMONI ================= -->
 
-<section class="container">
+<section id="testimoni" style="padding:100px 8%;">
 
-<h2 class="title">Testimoni Pelanggan</h2>
+<h2 style="text-align:center;font-size:48px;margin-bottom:60px;">
+Testimoni Pelanggan
+</h2>
 
-<div class="cards">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;">
 
 <div class="card">
 ⭐⭐⭐⭐⭐
-<h3>Sangat Memuaskan</h3>
+<h3 style="margin:15px 0;">Pelayanan Cepat</h3>
 <p>
-Followers masuk dengan cepat. Pelayanan ramah dan profesional.
+Followers masuk sesuai pesanan. Admin ramah dan cepat merespons.
 </p>
 </div>
 
 <div class="card">
 ⭐⭐⭐⭐⭐
-<h3>Terpercaya</h3>
+<h3 style="margin:15px 0;">Harga Terbaik</h3>
 <p>
-Sudah beberapa kali order, hasil selalu sesuai harapan.
+Sudah beberapa kali order dan selalu puas dengan hasilnya.
 </p>
 </div>
 
 <div class="card">
 ⭐⭐⭐⭐⭐
-<h3>Recommended</h3>
+<h3 style="margin:15px 0;">Sangat Direkomendasikan</h3>
 <p>
-Harga terjangkau, proses cepat, admin responsif.
+Proses mudah, pembayaran cepat, hasil memuaskan.
 </p>
 </div>
 
@@ -321,16 +572,18 @@ Harga terjangkau, proses cepat, admin responsif.
 
 <!-- ================= FAQ ================= -->
 
-<section class="container">
+<section style="padding:100px 8%;">
 
-<h2 class="title">Pertanyaan Umum</h2>
+<h2 style="text-align:center;font-size:48px;margin-bottom:60px;">
+Pertanyaan Umum
+</h2>
 
 <div class="card">
 
 <h3>Apakah akun saya aman?</h3>
 
-<p>
-Ya. Kami tidak memerlukan password akun Anda.
+<p style="margin-top:15px;">
+Ya. Kami tidak meminta password akun Anda.
 </p>
 
 </div>
@@ -341,8 +594,8 @@ Ya. Kami tidak memerlukan password akun Anda.
 
 <h3>Berapa lama prosesnya?</h3>
 
-<p>
-Pesanan diproses setelah pembayaran dikonfirmasi. Waktu pengerjaan dapat berbeda tergantung jenis layanan.
+<p style="margin-top:15px;">
+Pesanan diproses setelah pembayaran dikonfirmasi. Waktu pengerjaan dapat berbeda tergantung jenis layanan dan jumlah pesanan.
 </p>
 
 </div>
@@ -353,126 +606,95 @@ Pesanan diproses setelah pembayaran dikonfirmasi. Waktu pengerjaan dapat berbeda
 
 <h3>Bagaimana cara memesan?</h3>
 
-<p>
-
-Klik tombol Pesan Sekarang, kirim username Instagram Anda, lalu lakukan pembayaran.
-
+<p style="margin-top:15px;">
+Klik tombol Pesan, kirim username akun dan lakukan pembayaran sesuai petunjuk admin.
 </p>
 
 </div>
 
 </section>
 
-<!-- ================= KONTAK ================= -->
+<!-- ================= CTA ================= -->
 
-<section id="kontak" class="container">
+<section style="padding:120px 8%;text-align:center;">
 
-<h2 class="title">Hubungi Kami</h2>
+<h2 style="font-size:55px;">
+Siap Mengembangkan Media Sosial Anda?
+</h2>
 
-<div class="card">
+<p style="margin:30px auto;max-width:700px;font-size:20px;opacity:.85;">
 
-<h2>Pusat Media Digital</h2>
-
-<p>
-
-WhatsApp
+Dapatkan layanan Followers, Likes, Views, dan Engagement dengan proses cepat dan pelayanan profesional.
 
 </p>
-
-<h3>
-
-085855444724
-
-</h3>
 
 <a class="btn"
 
-href="https://wa.me/6285855444724">
+href="https://wa.me/6285855444724?text=Halo%20Admin,%20Saya%20ingin%20bertanya">
 
-Chat WhatsApp
+Hubungi Kami
 
 </a>
 
-</div>
-
 </section>
 
-<!-- Tombol WhatsApp -->
+<!-- Tombol WhatsApp Mengambang -->
 
 <a href="https://wa.me/6285855444724"
 
-style="
-
-position:fixed;
-
+style="position:fixed;
 bottom:25px;
-
 right:25px;
-
-width:65px;
-
-height:65px;
-
-border-radius:50%;
-
+width:70px;
+height:70px;
 background:#25D366;
-
+border-radius:50%;
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
+font-size:34px;
 text-decoration:none;
-
-font-size:30px;
-
-color:white;
-
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-
-z-index:999;
-
-">
+box-shadow:0 15px 35px rgba(0,0,0,.4);
+z-index:9999;">
 
 💬
 
 </a>
 
-<footer>
+<!-- ================= FOOTER ================= -->
 
-<h2>
+<footer id="kontak"
+
+style="padding:60px 8%;
+background:#021225;
+text-align:center;">
+
+<h2 style="font-size:34px;">
 
 Pusat Media Digital
 
 </h2>
 
-<p>
+<p style="margin-top:20px;opacity:.8;">
 
-Followers • Likes • Views • Komentar
-
-</p>
-
-<br>
-
-<p>
-
-WhatsApp :
-085855444724
+Followers • Likes • Views • Komentar • Share
 
 </p>
 
-<br>
+<p style="margin-top:20px;">
 
-<p>
+WhatsApp:
+<strong>085855444724</strong>
+
+</p>
+
+<p style="margin-top:30px;font-size:14px;opacity:.6;">
 
 © 2026 Pusat Media Digital.
-Semua Hak Dilindungi.
+Seluruh Hak Cipta Dilindungi.
 
 </p>
 
 </footer>
 
 </body>
-
-</html>
