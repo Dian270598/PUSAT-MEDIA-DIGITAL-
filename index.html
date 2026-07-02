@@ -1,13 +1,195 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pusat Media Digital</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<title>Pusat Media Digital | Solusi Media Sosial</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#f5f9ff;
+color:#222;
+
+}
+
+header{
+
+position:fixed;
+width:100%;
+top:0;
+left:0;
+z-index:999;
+
+background:rgba(0,60,170,.92);
+
+backdrop-filter:blur(15px);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 8%;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:800;
+
+color:white;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+margin-left:28px;
+
+color:white;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#87d4ff;
+
+}
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+flex-direction:column;
+
+padding:100px 20px;
+
+background:
+linear-gradient(135deg,#004cff,#00b4ff);
+
+color:white;
+
+}
+
+.hero h1{
+
+font-size:60px;
+
+max-width:850px;
+
+line-height:1.2;
+
+}
+
+.hero span{
+
+color:#9fe7ff;
+
+}
+
+.hero p{
+
+margin-top:25px;
+
+font-size:20px;
+
+max-width:700px;
+
+}
+
+.button{
+
+margin-top:40px;
+
+display:inline-block;
+
+padding:18px 45px;
+
+background:white;
+
+color:#0055ff;
+
+border-radius:60px;
+
+text-decoration:none;
+
+font-weight:700;
+
+transition:.3s;
+
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.button:hover{
+
+transform:translateY(-5px);
+
+}
+
+.wave{
+
+position:absolute;
+
+bottom:0;
+
+left:0;
+
+width:100%;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
@@ -15,123 +197,53 @@
 <header>
 
 <div class="logo">
+
 Pusat Media Digital
+
 </div>
 
 <nav>
 
-<a href="#home">Beranda</a>
 <a href="#layanan">Layanan</a>
+
 <a href="#harga">Harga</a>
+
+<a href="#testimoni">Testimoni</a>
+
 <a href="#kontak">Kontak</a>
 
 </nav>
 
 </header>
 
-<section class="hero" id="home">
+<section class="hero">
 
 <h1>
-Tingkatkan Performa
-<span>Media Sosial Anda</span>
+
+Tingkatkan
+
+<span>Media Sosial</span>
+
+Anda Bersama
+
+Pusat Media Digital
+
 </h1>
 
 <p>
-Followers • Likes • Views • Komentar • Share
+
+Followers • Likes • Views • Share • Komentar
+
+dengan pelayanan cepat, aman, dan profesional.
+
 </p>
 
-<a href="https://wa.me/6285855444724" class="btn">
-Pesan via WhatsApp
+<a class="button"
+
+href="https://wa.me/6285855444724">
+
+Pesan Sekarang
+
 </a>
 
 </section>
-
-<section id="layanan">
-
-<h2>Layanan Kami</h2>
-
-<div class="card">
-
-<h3>Instagram Followers</h3>
-
-<p>Meningkatkan kredibilitas akun Anda.</p>
-
-</div>
-
-<div class="card">
-
-<h3>Likes Instagram</h3>
-
-<p>Meningkatkan interaksi postingan.</p>
-
-</div>
-
-<div class="card">
-
-<h3>Views Reels</h3>
-
-<p>Meningkatkan jangkauan konten.</p>
-
-</div>
-
-</section>
-
-<section id="harga">
-
-<h2>Daftar Harga</h2>
-
-<div class="price-card">
-
-100 Followers
-
-<strong>Rp10.000</strong>
-
-</div>
-
-<div class="price-card">
-
-500 Followers
-
-<strong>Rp25.000</strong>
-
-</div>
-
-<div class="price-card">
-
-1.000 Followers
-
-<strong>Rp45.000</strong>
-
-</div>
-
-<div class="price-card">
-
-5.000 Followers
-
-<strong>Rp120.000</strong>
-
-</div>
-
-<div class="price-card">
-
-10.000 Followers
-
-<strong>Rp220.000</strong>
-
-</div>
-
-</section>
-
-<footer id="kontak">
-
-<h2>Pusat Media Digital</h2>
-
-<p>WhatsApp : 085855444724</p>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
