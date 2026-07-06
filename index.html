@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pusat Media Digital</title>
+<title>Pusat Media Digital | Jasa Followers, Likes, Views & Digital Marketing</title>
+
+<meta name="description" content="Pusat Media Digital menyediakan layanan Followers, Likes, Views Instagram, TikTok, Facebook, Website Development, Branding dan Digital Marketing terpercaya.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 <style>
 
@@ -17,72 +24,20 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+}
+
+html{
 scroll-behavior:smooth;
 }
 
 body{
-background:#07152b;
+
+background:
+linear-gradient(135deg,#031B4E,#063C8E,#0B5ED7);
+
 color:white;
+
 overflow-x:hidden;
-}
-
-body::before{
-
-content:"";
-
-position:fixed;
-
-width:900px;
-height:900px;
-
-background:radial-gradient(circle,#0077ff55,transparent);
-
-top:-300px;
-right:-250px;
-
-z-index:-1;
-
-animation:float 8s infinite alternate;
-
-}
-
-body::after{
-
-content:"";
-
-position:fixed;
-
-width:700px;
-height:700px;
-
-background:radial-gradient(circle,#00d4ff44,transparent);
-
-bottom:-250px;
-left:-200px;
-
-z-index:-1;
-
-animation:float2 10s infinite alternate;
-
-}
-
-@keyframes float{
-
-100%{
-
-transform:translateY(80px) translateX(-80px);
-
-}
-
-}
-
-@keyframes float2{
-
-100%{
-
-transform:translateY(-70px) translateX(70px);
-
-}
 
 }
 
@@ -96,7 +51,7 @@ left:0;
 
 width:100%;
 
-padding:20px 8%;
+padding:18px 8%;
 
 display:flex;
 
@@ -104,9 +59,9 @@ justify-content:space-between;
 
 align-items:center;
 
-backdrop-filter:blur(20px);
+backdrop-filter:blur(15px);
 
-background:#001d44aa;
+background:rgba(0,0,0,.15);
 
 z-index:999;
 
@@ -116,13 +71,15 @@ z-index:999;
 
 font-size:28px;
 
-font-weight:800;
+font-weight:700;
+
+color:white;
 
 }
 
 .logo span{
 
-color:#4bc4ff;
+color:#55B8FF;
 
 }
 
@@ -134,19 +91,21 @@ color:white;
 
 margin-left:30px;
 
+font-weight:500;
+
 transition:.3s;
 
 }
 
 nav a:hover{
 
-color:#59c8ff;
+color:#5ec8ff;
 
 }
 
 .hero{
 
-height:100vh;
+min-height:100vh;
 
 display:flex;
 
@@ -154,145 +113,213 @@ justify-content:center;
 
 align-items:center;
 
-text-align:center;
-
-flex-direction:column;
-
-padding:20px;
+padding:120px 8%;
 
 }
 
-.hero h1{
+.left{
 
-font-size:70px;
-
-max-width:900px;
-
-line-height:1.2;
-
-margin-bottom:25px;
+flex:1;
 
 }
 
-.hero h1 span{
+.left h1{
 
-background:linear-gradient(90deg,#00c6ff,#ffffff);
+font-size:58px;
 
--webkit-background-clip:text;
+font-weight:800;
 
--webkit-text-fill-color:transparent;
+line-height:70px;
+
+margin-bottom:20px;
 
 }
 
-.hero p{
+.left h1 span{
 
-font-size:22px;
+color:#5EC8FF;
 
-max-width:700px;
+}
+
+.left p{
+
+font-size:18px;
+
+line-height:32px;
 
 opacity:.9;
+
+margin-bottom:35px;
+
+max-width:650px;
 
 }
 
 .btn{
 
-margin-top:40px;
-
 display:inline-block;
 
-padding:18px 45px;
+padding:16px 38px;
 
-background:linear-gradient(90deg,#0077ff,#00d4ff);
-
-color:white;
-
-text-decoration:none;
+background:#1DA1F2;
 
 border-radius:50px;
 
-font-weight:700;
+text-decoration:none;
 
-box-shadow:0 15px 40px #0077ff55;
+color:white;
 
-transition:.4s;
+font-weight:600;
+
+transition:.35s;
+
+box-shadow:
+
+0 0 20px #1DA1F2;
 
 }
 
 .btn:hover{
 
-transform:translateY(-6px);
+transform:translateY(-4px);
 
-box-shadow:0 25px 60px #00aaff88;
+box-shadow:
+
+0 0 40px #1DA1F2;
+
+}
+
+.hero-img{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.circle{
+
+width:430px;
+
+height:430px;
+
+border-radius:50%;
+
+background:
+
+linear-gradient(45deg,#0EA5FF,#004CFF);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:
+
+0 0 70px rgba(0,170,255,.5);
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+.circle i{
+
+font-size:160px;
+
+color:white;
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-15px);
+
+}
 
 }
 
 .stats{
 
-display:grid;
+display:flex;
 
-grid-template-columns:repeat(4,1fr);
+gap:35px;
 
-gap:30px;
-
-padding:80px 8%;
+margin-top:45px;
 
 }
 
-.card{
+.stats div{
 
 background:rgba(255,255,255,.08);
 
-backdrop-filter:blur(18px);
+padding:18px 25px;
 
-border-radius:25px;
+border-radius:18px;
 
-padding:35px;
+backdrop-filter:blur(10px);
+
+}
+
+.stats h2{
+
+font-size:30px;
+
+color:#5EC8FF;
+
+}
+
+.stats p{
+
+font-size:14px;
+
+margin-top:5px;
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column;
 
 text-align:center;
 
-border:1px solid rgba(255,255,255,.08);
-
-transition:.4s;
-
 }
 
-.card:hover{
-
-transform:translateY(-10px);
-
-}
-
-.card h2{
-
-font-size:46px;
-
-color:#5ed8ff;
-
-}
-
-.card p{
-
-margin-top:10px;
-
-}
-
-@media(max-width:768px){
-
-.hero h1{
+.left h1{
 
 font-size:40px;
 
+line-height:50px;
+
 }
 
-.stats{
+.circle{
 
-grid-template-columns:1fr 1fr;
+width:300px;
+
+height:300px;
+
+margin-top:40px;
 
 }
 
 nav{
 
 display:none;
+
+}
+
+.stats{
+
+justify-content:center;
+
+flex-wrap:wrap;
 
 }
 
@@ -314,11 +341,15 @@ Pusat <span>Media Digital</span>
 
 <nav>
 
-<a href="#">Beranda</a>
+<a href="#">Home</a>
 
 <a href="#layanan">Layanan</a>
 
 <a href="#harga">Harga</a>
+
+<a href="#testimoni">Testimoni</a>
+
+<a href="#faq">FAQ</a>
 
 <a href="#kontak">Kontak</a>
 
@@ -328,51 +359,52 @@ Pusat <span>Media Digital</span>
 
 <section class="hero">
 
+<div class="left">
+
 <h1>
 
-Tingkatkan
+Solusi <span>Digital Marketing</span><br>
 
-<span>Media Sosial</span>
-
-Anda
+Terpercaya di Indonesia
 
 </h1>
 
 <p>
 
-Followers • Likes • Views • Komentar • Share
+Kami menyediakan layanan Followers, Likes, Views, Branding,
+Website Development, Press Release, Verified Instagram,
+hingga Digital Marketing untuk membantu bisnis dan personal
+brand Anda berkembang lebih cepat.
 
 </p>
 
-<a class="btn"
+<a href="#layanan" class="btn">
 
-href="https://wa.me/6285855444724">
+<i class="fa-solid fa-layer-group"></i>
 
-Pesan Sekarang
+Lihat Layanan
 
 </a>
 
-</section>
+<div class="stats">
 
-<section class="stats">
-
-<div class="card">
+<div>
 
 <h2>10K+</h2>
-
-<p>Pesanan</p>
-
-</div>
-
-<div class="card">
-
-<h2>5K+</h2>
 
 <p>Pelanggan</p>
 
 </div>
 
-<div class="card">
+<div>
+
+<h2>4.9★</h2>
+
+<p>Rating</p>
+
+</div>
+
+<div>
 
 <h2>24/7</h2>
 
@@ -380,319 +412,18 @@ Pesan Sekarang
 
 </div>
 
-<div class="card">
-
-<h2>99%</h2>
-
-<p>Kepuasan</p>
+</div>
 
 </div>
 
-</section>
-<!-- ================= LAYANAN ================= -->
+<div class="hero-img">
 
-<section id="layanan" style="padding:100px 8%;">
+<div class="circle">
 
-<h2 style="text-align:center;font-size:48px;margin-bottom:60px;">
-Layanan Kami
-</h2>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;">
-
-<div class="card">
-
-<div style="font-size:60px;">📈</div>
-
-<h3 style="margin:20px 0;">Followers Instagram</h3>
-
-<p>
-Membantu meningkatkan jumlah followers akun Anda.
-</p>
-
-</div>
-
-<div class="card">
-
-<div style="font-size:60px;">❤️</div>
-
-<h3 style="margin:20px 0;">Likes Instagram</h3>
-
-<p>
-Meningkatkan interaksi pada setiap postingan.
-</p>
-
-</div>
-
-<div class="card">
-
-<div style="font-size:60px;">🎬</div>
-
-<h3 style="margin:20px 0;">Views Reels</h3>
-
-<p>
-Meningkatkan jangkauan video dan Reels Anda.
-</p>
-
-</div>
-
-<div class="card">
-
-<div style="font-size:60px;">💬</div>
-
-<h3 style="margin:20px 0;">Komentar</h3>
-
-<p>
-Meningkatkan engagement media sosial.
-</p>
+<i class="fa-solid fa-chart-line"></i>
 
 </div>
 
 </div>
 
 </section>
-
-<!-- ================= HARGA ================= -->
-
-<section id="harga" style="padding:100px 8%;">
-
-<h2 style="text-align:center;font-size:48px;margin-bottom:60px;">
-Daftar Harga Terlaris Followers Instagram
-</h2>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;">
-
-<div class="card">
-<h3>100 Followers</h3>
-<h1 style="margin:20px 0;color:#59d4ff;">Rp10.000</h1>
-<a class="btn" href="https://wa.me/6285855444724?text=Halo%20Admin,%20saya%20ingin%20pesan%20100%20Followers">Pesan</a>
-</div>
-
-<div class="card">
-<h3>500 Followers</h3>
-<h1 style="margin:20px 0;color:#59d4ff;">Rp25.000</h1>
-<a class="btn" href="https://wa.me/6285855444724?text=Halo%20Admin,%20saya%20ingin%20pesan%20500%20Followers">Pesan</a>
-</div>
-
-<div class="card">
-<h3>1.000 Followers</h3>
-<h1 style="margin:20px 0;color:#59d4ff;">Rp45.000</h1>
-<a class="btn" href="https://wa.me/6285855444724?text=Halo%20Admin,%20saya%20ingin%20pesan%201000%20Followers">Pesan</a>
-</div>
-
-<div class="card">
-<h3>5.000 Followers</h3>
-<h1 style="margin:20px 0;color:#59d4ff;">Rp120.000</h1>
-<a class="btn" href="https://wa.me/6285855444724?text=Halo%20Admin,%20saya%20ingin%20pesan%205000%20Followers">Pesan</a>
-</div>
-
-<div class="card">
-<h3>10.000 Followers</h3>
-<h1 style="margin:20px 0;color:#59d4ff;">Rp220.000</h1>
-<a class="btn" href="https://wa.me/6285855444724?text=Halo%20Admin,%20saya%20ingin%20pesan%2010000%20Followers">Pesan</a>
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= KEUNGGULAN ================= -->
-
-<section style="padding:100px 8%;">
-
-<h2 style="text-align:center;font-size:48px;margin-bottom:60px;">
-Mengapa Memilih Kami?
-</h2>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;">
-
-<div class="card">
-⚡
-<h3 style="margin:20px 0;">Proses Cepat</h3>
-<p>Pesanan diproses sesegera mungkin setelah pembayaran dikonfirmasi.</p>
-</div>
-
-<div class="card">
-🔒
-<h3 style="margin:20px 0;">Layanan Aman</h3>
-<p>Tidak memerlukan kata sandi akun Anda untuk melakukan pemesanan.</p>
-</div>
-
-<div class="card">
-💬
-<h3 style="margin:20px 0;">Admin Responsif</h3>
-<p>Siap membantu menjawab pertanyaan Anda melalui WhatsApp.</p>
-</div>
-
-<div class="card">
-💎
-<h3 style="margin:20px 0;">Harga Terjangkau</h3>
-<p>Paket lengkap dengan harga kompetitif.</p>
-</div>
-
-</div>
-
-</section>
-<!-- ================= TESTIMONI ================= -->
-
-<section id="testimoni" style="padding:100px 8%;">
-
-<h2 style="text-align:center;font-size:48px;margin-bottom:60px;">
-Testimoni Pelanggan
-</h2>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;">
-
-<div class="card">
-⭐⭐⭐⭐⭐
-<h3 style="margin:15px 0;">Pelayanan Cepat</h3>
-<p>
-Followers masuk sesuai pesanan. Admin ramah dan cepat merespons.
-</p>
-</div>
-
-<div class="card">
-⭐⭐⭐⭐⭐
-<h3 style="margin:15px 0;">Harga Terbaik</h3>
-<p>
-Sudah beberapa kali order dan selalu puas dengan hasilnya.
-</p>
-</div>
-
-<div class="card">
-⭐⭐⭐⭐⭐
-<h3 style="margin:15px 0;">Sangat Direkomendasikan</h3>
-<p>
-Proses mudah, pembayaran cepat, hasil memuaskan.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= FAQ ================= -->
-
-<section style="padding:100px 8%;">
-
-<h2 style="text-align:center;font-size:48px;margin-bottom:60px;">
-Pertanyaan Umum
-</h2>
-
-<div class="card">
-
-<h3>Apakah akun saya aman?</h3>
-
-<p style="margin-top:15px;">
-Ya. Kami tidak meminta password akun Anda.
-</p>
-
-</div>
-
-<br>
-
-<div class="card">
-
-<h3>Berapa lama prosesnya?</h3>
-
-<p style="margin-top:15px;">
-Pesanan diproses setelah pembayaran dikonfirmasi. Waktu pengerjaan dapat berbeda tergantung jenis layanan dan jumlah pesanan.
-</p>
-
-</div>
-
-<br>
-
-<div class="card">
-
-<h3>Bagaimana cara memesan?</h3>
-
-<p style="margin-top:15px;">
-Klik tombol Pesan, kirim username akun dan lakukan pembayaran sesuai petunjuk admin.
-</p>
-
-</div>
-
-</section>
-
-<!-- ================= CTA ================= -->
-
-<section style="padding:120px 8%;text-align:center;">
-
-<h2 style="font-size:55px;">
-Siap Membantu Media Sosial Anda
-</h2>
-
-<p style="margin:30px auto;max-width:700px;font-size:20px;opacity:.85;">
-
-Dapatkan layanan Followers, Likes, Views, dan Engagement dengan proses cepat dan pelayanan profesional.
-
-</p>
-
-<a class="btn"
-
-href="https://wa.me/6285855444724?text=Halo%20Admin,%20Saya%20ingin%20bertanya">
-
-Hubungi Kami
-
-</a>
-
-</section>
-
-<!-- Tombol WhatsApp Mengambang -->
-
-<a href="https://wa.me/6285855444724"
-
-style="position:fixed;
-bottom:25px;
-right:25px;
-width:70px;
-height:70px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:34px;
-text-decoration:none;
-box-shadow:0 15px 35px rgba(0,0,0,.4);
-z-index:9999;">
-
-💬
-
-</a>
-
-<!-- ================= FOOTER ================= -->
-
-<footer id="kontak"
-
-style="padding:60px 8%;
-background:#021225;
-text-align:center;">
-
-<h2 style="font-size:34px;">
-
-Pusat Media Digital
-
-</h2>
-
-<p style="margin-top:20px;opacity:.8;">
-
-Followers • Likes • Views • Komentar • Share
-
-</p>
-
-<p style="margin-top:20px;">
-
-
-</p>
-
-<p style="margin-top:30px;font-size:14px;opacity:.6;">
-
-© 2026 Pusat Media Digital.
-Seluruh Hak Cipta Dilindungi.
-
-</p>
-
-</footer>
-
-</body>
